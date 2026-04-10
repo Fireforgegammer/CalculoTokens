@@ -1,11 +1,7 @@
 import customtkinter as ctk
 
 def crear_seccion(master, titulo, color_fondo, fuente_tit, fuente_res, color_caja_blanca="white"):
-    frame_fondo = ctk.CTkFrame(
-        master, 
-        fg_color=color_fondo, 
-        corner_radius=15
-    )
+    frame_fondo = ctk.CTkFrame(master, fg_color=color_fondo, corner_radius=15)
     
     label_titulo = ctk.CTkLabel(
         frame_fondo,
