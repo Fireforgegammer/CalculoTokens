@@ -19,19 +19,15 @@ class EditorModo:
 
     def _set_estado_interactivo(self, w, state):
         if isinstance(w, (ctk.CTkButton, ctk.CTkComboBox, ctk.CTkOptionMenu, ctk.CTkEntry, ctk.CTkTextbox)):
-            try:
-                w.configure(state=state)
-            except:
-                pass
+            try: w.configure(state=state)
+            except: pass
         for hijo in w.winfo_children():
             self._set_estado_interactivo(hijo, state)
 
     def _aplicar_escudo_total(self, target, padre):
         if isinstance(target, (ctk.CTkButton, ctk.CTkComboBox, ctk.CTkOptionMenu, ctk.CTkEntry, ctk.CTkTextbox)):
-            try:
-                target.configure(state="disabled")
-            except:
-                pass
+            try: target.configure(state="disabled")
+            except: pass
         
         target.bind("<Button-1>", lambda e: self._inicio_dr(e, padre), add="+")
         target.bind("<B1-Motion>", lambda e: self._movimiento_dr(e, padre), add="+")
