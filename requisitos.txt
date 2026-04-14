@@ -1,3 +1,4 @@
-customtkinter
-pytest
-pytest-cov
+customtkinter>=5.0.0
+tiktoken>=0.5.0
+pytest>=7.0.0
+pytest-cov>=4.0.0
